@@ -10,4 +10,5 @@ public class CharacterMapper {
         charactersDTOResponse.setImageUrl(characterEntity.getImageUrl());
         return charactersDTOResponse;
     }
+
 }

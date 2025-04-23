@@ -1,7 +1,6 @@
 package com.disney.disneyapi.entity;
 
 import jakarta.persistence.*;
-import org.hibernate.annotations.GenericGenerator;
 
 import java.util.List;
 import java.util.UUID;
@@ -11,10 +10,9 @@ import java.util.UUID;
 public class CharacterEntity {
     @Id
     @GeneratedValue(generator = "UUID")
-    @GenericGenerator(name = "UUID", strategy = "org.hibernate.id.UUIDGenerator")
     @Column(updatable = false, nullable = false)
     private UUID id;
-
+    @Column(name = "name")
     private String name;
     private Integer age;
     private Double weight;
